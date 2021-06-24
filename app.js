@@ -7,7 +7,7 @@ const model = require("./model");
 // getting the Todo schema
 const Todo = model.Todo;
 // define a port
-const port = 8080;
+const port = process.env.PORT || 8080;
 // allowing the server to accept json data.
 app.use(express.json({}));
 
