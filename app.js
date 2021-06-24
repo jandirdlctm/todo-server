@@ -9,6 +9,8 @@ const Todo = model.Todo;
 // define a port
 const port = process.env.PORT || 8080;
 // allowing the server to accept json data.
+const cors = require("cors");
+app.use(cors());
 app.use(express.json({}));
 
 const propertyList = ["name", "description", "done", "deadline"];
